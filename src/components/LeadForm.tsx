@@ -14,10 +14,7 @@ import {
 
 export default function LeadForm() {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
         email: '',
-        phone: '',
     });
     const [acceptMarketing, setAcceptMarketing] = useState(true);
     const [status, setStatus] = useState({ type: '', message: '' });
@@ -58,10 +55,7 @@ export default function LeadForm() {
             });
 
             setFormData({
-                firstName: '',
-                lastName: '',
                 email: '',
-                phone: '',
             });
             setAcceptMarketing(true);
         } catch (error) {
@@ -87,7 +81,7 @@ export default function LeadForm() {
                             textAlign: 'center',
                         }}
                     >
-                        Ready to Research Like the Pros?
+                        Get the quality clarity guide researchers rely on
                     </Typography>
 
                     <Typography
@@ -161,24 +155,6 @@ export default function LeadForm() {
                         <Stack spacing={2}>
                             <TextField
                                 fullWidth
-                                label="First Name"
-                                name="firstName"
-                                value={formData.firstName}
-                                onChange={handleChange}
-                                required
-                                variant="outlined"
-                            />
-                            <TextField
-                                fullWidth
-                                label="Last Name"
-                                name="lastName"
-                                value={formData.lastName}
-                                onChange={handleChange}
-                                required
-                                variant="outlined"
-                            />
-                            <TextField
-                                fullWidth
                                 label="Email Address"
                                 name="email"
                                 type="email"
@@ -188,16 +164,6 @@ export default function LeadForm() {
                                 variant="outlined"
                                 autoComplete="email"
                                 placeholder="your.email@example.com"
-                            />
-                            <TextField
-                                fullWidth
-                                label="Phone Number"
-                                name="phone"
-                                type="tel"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                required
-                                variant="outlined"
                             />
                         </Stack>
 

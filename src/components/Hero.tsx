@@ -3,10 +3,7 @@ import { Box, Container, Typography, TextField, Button, Stack } from '@mui/mater
 
 export default function Hero() {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
         email: '',
-        phone: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -79,7 +76,7 @@ export default function Hero() {
                         mx: 'auto',
                     }}
                 >
-                    Researchers at top institutions use these advanced validation methods to catch what standard certificates miss. Now you can too.
+                    Learn the critical quality factors that COAs were never designed to show
                 </Typography>
 
                 {/* Ebook Cover Image */}
@@ -246,7 +243,7 @@ export default function Hero() {
                             fontSize: '0.9375rem',
                         }}
                     >
-                        Exclusive Access for Guide Readers
+                        Get the Guide + Bonus
                     </Box>
                 </Box>
 
@@ -286,44 +283,10 @@ export default function Hero() {
                     >
                         <TextField
                             fullWidth
-                            label="First Name"
-                            name="firstName"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            required
-                            variant="outlined"
-                            size="medium"
-                            sx={{ backgroundColor: '#FFFFFF' }}
-                        />
-                        <TextField
-                            fullWidth
-                            label="Last Name"
-                            name="lastName"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            required
-                            variant="outlined"
-                            size="medium"
-                            sx={{ backgroundColor: '#FFFFFF' }}
-                        />
-                        <TextField
-                            fullWidth
                             label="Email Address"
                             name="email"
                             type="email"
                             value={formData.email}
-                            onChange={handleChange}
-                            required
-                            variant="outlined"
-                            size="medium"
-                            sx={{ backgroundColor: '#FFFFFF' }}
-                        />
-                        <TextField
-                            fullWidth
-                            label="Phone Number"
-                            name="phone"
-                            type="tel"
-                            value={formData.phone}
                             onChange={handleChange}
                             required
                             variant="outlined"
